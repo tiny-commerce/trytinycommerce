@@ -11,8 +11,13 @@ export default function useIcon() {
     Website = "desktop",
   }
 
+  function getIcon(icon: IconList) {
+    return `${iconPrefix}${icon}`;
+  }
+
   return {
     iconPrefix,
     IconList,
+    getIcon,
   };
 }
