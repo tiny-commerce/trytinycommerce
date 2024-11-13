@@ -1,3 +1,11 @@
+<script setup>
+import { ref } from "vue";
+import { ChevronDownIcon } from "@heroicons/vue/20/solid";
+import { Switch, SwitchGroup, SwitchLabel } from "@headlessui/vue";
+
+const agreed = ref(false);
+</script>
+
 <template>
   <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div
@@ -188,11 +196,3 @@
     </form>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import { ChevronDownIcon } from "@heroicons/vue/20/solid";
-import { Switch, SwitchGroup, SwitchLabel } from "@headlessui/vue";
-
-const agreed = ref(false);
-</script>

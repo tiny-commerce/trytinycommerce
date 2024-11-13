@@ -1,3 +1,18 @@
+<script setup>
+import { ref } from "vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
+
+const mobileMenuOpen = ref(false);
+</script>
+
 <template>
   <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50">
@@ -191,18 +206,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
-
-const mobileMenuOpen = ref(false);
-</script>
