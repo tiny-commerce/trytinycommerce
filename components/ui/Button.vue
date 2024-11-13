@@ -1,15 +1,44 @@
 <script setup lang="ts">
 import Button from "primevue/button";
+import type { IconList } from "~/composables/useIcon";
 
-// "secondary" | "info" | "success" | "warn" | "danger" | "contrast" | "help"
+const { getIcon } = useIcon();
 
-// text
+interface ComponentProps {
+  label?: string;
+  color?: "primary" | "secondary" | "info" | "success" | "warn" | "danger";
+  variant?: "solid" | "text" | "outlined";
+  size?: "small" | "large";
+  icon?: IconList;
+  disabled?: boolean;
+  loading?: boolean;
+  fullWidth?: boolean;
+}
 
-// outlined
+const props = withDefaults(defineProps<ComponentProps>(), {
+  color: "primary",
+  variant: "solid",
+  disabled: false,
+  loading: false,
+  fullWidth: false,
+});
 
-// size = small | large
+const text = ref(props.variant === "text");
+const outlined = ref(props.variant === "outlined");
+
+const iconString = ref<string | undefined>(undefined);
+if (props.icon) iconString.value = getIcon(props.icon);
 </script>
 
 <template>
-  <Button label="Submit" severity="success" />
+  <Button
+    :label="label"
+    :severity="color"
+    :text="text"
+    :outlined="outlined"
+    :icon="iconString"
+    :disabled="disabled"
+    :loading="loading"
+    :fluid="fullWidth"
+  />
 </template>
