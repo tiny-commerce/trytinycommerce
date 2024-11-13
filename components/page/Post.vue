@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white px-6 py-32 lg:px-8">
+  <div class="prose prose-slate max-w-none px-6 py-32 lg:px-8">
     <div class="mx-auto max-w-3xl text-base/7 text-gray-700">
       <p class="text-base/7 font-semibold text-indigo-600">Introducing</p>
       <h1
