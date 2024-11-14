@@ -1,28 +1,29 @@
 <script setup lang="ts">
 import { Form } from "@primevue/forms";
-
 import { reactive } from "vue";
 import { useToast } from "primevue/usetoast";
 
 const toast = useToast();
 
-const initialValues = reactive({
-  username: "",
-});
+const props = defineProps<{
+  fields: any;
+}>();
 
-const resolver = ({ values }) => {
-  const errors = {};
+const initialValues = reactive(props.fields);
 
-  if (!values.username) {
-    errors.username = [{ message: "Username is required." }];
-  }
+// const resolver = ({ values }: any) => {
+//   const errors = {};
 
-  return {
-    errors,
-  };
-};
+//   if (!values.username) {
+//     errors.username = [{ message: "Username is required." }];
+//   }
 
-const onFormSubmit = ({ valid }) => {
+//   return {
+//     errors,
+//   };
+// };
+
+const onFormSubmit = ({ valid }: any) => {
   if (valid) {
     toast.add({
       severity: "success",
@@ -37,20 +38,9 @@ const onFormSubmit = ({ valid }) => {
   <Form
     v-slot="$form"
     :initialValues
-    :resolver
     @submit="onFormSubmit"
-    class="flex flex-col gap-4 w-full sm:w-56"
+    class="flex flex-col gap-4"
   >
-    <div class="flex flex-col gap-1">
-      <InputText name="username" type="text" placeholder="Username" fluid />
-      <Message
-        v-if="$form.username?.invalid"
-        severity="error"
-        size="small"
-        variant="simple"
-        >{{ $form.username.error?.message }}</Message
-      >
-    </div>
-    <Button type="submit" severity="secondary" label="Submit" />
+    <slot></slot>
   </Form>
 </template>

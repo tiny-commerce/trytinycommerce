@@ -1,0 +1,11 @@
+[
+  { "name": "Store Management" },
+  { "name": "Customer Management" },
+  { "name": "Inventory Management" },
+  { "name": "Supply Management" },
+  { "name": "eCommerce Website" },
+  { "name": "Analytics" },
+  { "name": "Discount Codes" },
+  { "name": "POS System" },
+  { "name": "Shipping Integration" }
+]

@@ -1,7 +1,14 @@
-<script setup></script>
+<script setup lang="ts">
+const fields = {
+  firstName: "",
+  lastName: "",
+  emailAddress: "",
+  message: "",
+};
+</script>
 
 <template>
-  <form action="#" method="POST" class="mx-auto my-16 max-w-xl sm:my-20">
+  <UiForm :fields="fields" class="mx-auto my-16 max-w-xl sm:my-20">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <UiField label="First Name">
         <UiInput />
@@ -32,5 +39,5 @@
     <div class="mt-10">
       <UiButton label="Let's talk" type="submit" full-width />
     </div>
-  </form>
+  </UiForm>
 </template>
