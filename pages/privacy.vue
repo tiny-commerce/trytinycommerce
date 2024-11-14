@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div></div>
+  <div>
+    <PageHeader heading="Privacy Policy" />
+  </div>
 </template>

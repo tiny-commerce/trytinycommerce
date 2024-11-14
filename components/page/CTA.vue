@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-surface-800">
+  <div class="bg-surface-700">
     <div class="px-6 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h2
@@ -14,7 +14,7 @@
           In the meantime enter your email address below to be on the short list
           of makers who'll be invited to our launch.
         </p>
-        <div class="mt-12 flex gap-x-2">
+        <div class="mt-12 max-w-lg mx-auto flex gap-x-2">
           <label class="sr-only">Email address</label>
           <UiInput
             type="email"

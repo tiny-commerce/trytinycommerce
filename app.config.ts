@@ -6,14 +6,14 @@ export default defineAppConfig({
   navigation: {
     main: [
       { name: "Pricing", href: "/pricing" },
-      { name: "About", href: "/about" },
       { name: "Blog", href: "/blog" },
+      { name: "About", href: "/about" },
     ],
     all: [
       { name: "Home", href: "/" },
       { name: "Pricing", href: "/pricing" },
-      { name: "About", href: "/about" },
       { name: "Blog", href: "/blog" },
+      { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
     ],
     legal: [{ name: "Privacy Policy", href: "/privacy" }],

@@ -11,7 +11,7 @@ if (currentYear > startYear) {
 </script>
 
 <template>
-  <div>
+  <div class="mt-16">
     <PageCTA />
     <footer>
       <div

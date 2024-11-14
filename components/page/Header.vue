@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="px-6 py-16 sm:py-20 lg:px-8">
+  <div class="px-6 pt-16 mb-12 sm:pt-20 sm:mb-16 lg:px-8">
     <div class="mx-auto max-w-4xl text-center">
       <p v-if="eyebrow" class="mb-2 text-base/7 font-semibold text-primary">
         {{ eyebrow }}
