@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const appConfig = useAppConfig();
+
+useSeoMeta({
+  title: `About | ${appConfig.businessName}`,
+  description: "",
+});
+</script>
 
 <template>
   <div>

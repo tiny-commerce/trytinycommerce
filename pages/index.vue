@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import BlogHighlights from "~/components/page/BlogHighlights.vue";
-import FeatureHighlights from "~/components/page/FeatureHighlights.vue";
+const appConfig = useAppConfig();
+
+useSeoMeta({
+  title: `${appConfig.businessName}`,
+  description: "",
+});
 </script>
 
 <template>
   <div>
     <PageHero />
     <PageCTA />
-    <FeatureHighlights />
-    <BlogHighlights />
+    <PageFeatureHighlights />
+    <PageBlogHighlights />
   </div>
 </template>
