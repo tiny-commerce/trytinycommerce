@@ -1,14 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+const appConfig = useAppConfig();
 
 const mobileMenuOpen = ref(false);
 </script>
@@ -20,37 +13,34 @@ const mobileMenuOpen = ref(false);
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
+        <NuxtLink to="/" class="-m-1.5 p-1.5">
+          <Logo />
+        </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a
-          v-for="item in navigation"
+        <UiLink
+          v-for="item in appConfig.navigation.main"
           :key="item.name"
-          :href="item.href"
-          class="text-sm/6 font-semibold text-gray-900"
-          >{{ item.name }}</a
-        >
+          :to="item.href"
+          :label="item.name"
+        />
       </div>
       <div class="flex flex-1 items-center justify-end gap-x-6">
-        <a
-          href="#"
-          class="hidden text-sm/6 font-semibold text-gray-900 lg:block"
-          >Log in</a
-        >
-        <a
-          href="#"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >Sign up</a
-        >
+        <UiLink
+          v-if="appConfig.loginLink"
+          :to="appConfig.loginLink"
+          label="Log in"
+          external
+        />
+        <UiLink
+          v-if="appConfig.signupLink"
+          :to="appConfig.signupLink"
+          label="Sign up"
+          external
+          button
+        />
       </div>
-      <div class="flex lg:hidden">
+      <!-- <div class="flex lg:hidden">
         <button
           type="button"
           class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -59,9 +49,9 @@ const mobileMenuOpen = ref(false);
           <span class="sr-only">Open main menu</span>
           <Bars3Icon class="size-6" aria-hidden="true" />
         </button>
-      </div>
+      </div> -->
     </nav>
-    <Dialog
+    <!-- <Dialog
       class="lg:hidden"
       @close="mobileMenuOpen = false"
       :open="mobileMenuOpen"
@@ -114,6 +104,6 @@ const mobileMenuOpen = ref(false);
           </div>
         </div>
       </DialogPanel>
-    </Dialog>
+    </Dialog> -->
   </header>
 </template>

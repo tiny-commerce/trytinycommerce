@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import Image from "primevue/image";
+
+withDefaults(
+  defineProps<{
+    src: string;
+    alt: string;
+    width: number;
+    preview?: boolean;
+  }>(),
+  {
+    preview: false,
+  }
+);
 </script>
 
 <template>
-  <div class="card flex justify-center">
-    <Image
-      src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
-      alt="Image"
-      width="250"
-      preview
-    />
-  </div>
+  <Image :src="src" :alt="alt" :width="width" :preview="preview" />
 </template>

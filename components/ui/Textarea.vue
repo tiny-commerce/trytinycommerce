@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Textarea from "primevue/textarea";
-import { ref } from "vue";
 
-const value = ref("");
+const model = defineModel();
 </script>
 
 <template>
-  <Textarea v-model="value" autoResize rows="5" fluid />
+  <Textarea :model="model" autoResize rows="5" fluid />
 </template>

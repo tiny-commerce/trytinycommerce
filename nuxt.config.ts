@@ -1,4 +1,4 @@
-import Aura from "@primevue/themes/aura";
+import { MakerBizTheme } from "./assets/theme";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   primevue: {
     options: {
       theme: {
-        preset: Aura,
+        preset: MakerBizTheme,
         options: {
           darkModeSelector: "light",
         },

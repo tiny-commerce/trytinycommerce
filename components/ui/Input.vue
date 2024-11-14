@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import InputText from "primevue/inputtext";
-import { ref } from "vue";
 
-const value = ref(null);
+const model = defineModel();
 </script>
 
 <template>
-  <InputText type="text" v-model="value" fluid />
+  <InputText type="text" :model="model" fluid />
 </template>

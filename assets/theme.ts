@@ -1,7 +1,7 @@
 import { definePreset } from "@primevue/themes";
 import Aura from "@primevue/themes/aura";
 
-export const theme = definePreset(Aura, {
+export const MakerBizTheme = definePreset(Aura, {
   semantic: {
     primary: {
       50: "{orange.50}",
@@ -32,6 +32,13 @@ export const theme = definePreset(Aura, {
           900: "{slate.900}",
           950: "{slate.950}",
         },
+      },
+    },
+  },
+  components: {
+    button: {
+      padding: {
+        x: 10,
       },
     },
   },

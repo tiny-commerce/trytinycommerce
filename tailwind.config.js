@@ -16,26 +16,6 @@ export default {
     "src/app/spa-loading-template.html",
   ],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-
-      indigo: colors.indigo,
-
-      black: colors.black,
-      white: colors.white,
-      gray: colors.slate,
-
-      blue: colors.sky,
-      red: colors.red,
-      green: colors.emerald,
-      yellow: colors.amber,
-
-      orange: colors.orange,
-      primary: {
-        DEFAULT: colors.orange[700],
-      },
-    },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
