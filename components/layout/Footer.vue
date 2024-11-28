@@ -15,10 +15,11 @@ if (currentYear > startYear) {
     <PageCTA />
     <footer>
       <div
-        class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8"
+        class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-12 lg:px-8"
       >
         <nav
-          class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
+          v-if="appConfig.fullSite"
+          class="mb-4 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
           aria-label="Footer"
         >
           <UiLink
@@ -28,15 +29,17 @@ if (currentYear > startYear) {
             :label="item.name"
           />
         </nav>
-        <p class="mt-10 text-center text-sm/6 text-gray-600">
+        <p class="text-center text-sm/6 text-gray-600">
           &copy; {{ copyrightYear }} {{ appConfig.businessName }}. All rights
           reserved.
-          <UiLink
+          <NuxtLink
             v-for="item in appConfig.navigation.legal"
             :key="item.name"
             :to="item.href"
-            :label="item.name"
-          />
+            class="hover:text-primary"
+          >
+            {{ item.name }}
+          </NuxtLink>
         </p>
       </div>
     </footer>

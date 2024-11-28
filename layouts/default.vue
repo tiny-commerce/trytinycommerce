@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans text-surface-600">
     <LayoutHeader />
     <slot />
     <LayoutFooter />

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const featuredPost = {
   id: 1,
   title: "We’re incredibly proud to announce we have secured $75m in Series B",

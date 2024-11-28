@@ -35,11 +35,5 @@ export const MakerBizTheme = definePreset(Aura, {
       },
     },
   },
-  components: {
-    button: {
-      padding: {
-        x: 10,
-      },
-    },
-  },
+  components: {},
 });

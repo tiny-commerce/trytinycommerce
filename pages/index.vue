@@ -12,6 +12,6 @@ useSeoMeta({
     <PageHero />
     <PageCTA />
     <PageFeatureHighlights />
-    <PageBlogHighlights />
+    <!-- <PageBlogHighlights /> -->
   </div>
 </template>

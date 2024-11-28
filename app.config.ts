@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  fullSite: false,
   businessName: "MakerBiz",
   startYear: "2024",
   loginLink: null,

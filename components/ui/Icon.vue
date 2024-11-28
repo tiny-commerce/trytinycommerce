@@ -3,15 +3,22 @@ import type { IconList } from "~/composables/useIcon";
 
 interface ComponentProps {
   icon: IconList;
-  color: "primary" | "secondary" | "white";
+  color?: "primary" | "secondary" | "danger" | "white";
 }
 
-const props = defineProps<ComponentProps>();
+const props = withDefaults(defineProps<ComponentProps>(), {
+  color: "primary",
+});
 
 const { getIcon } = useIcon();
-const iconString = computed(() => getIcon(props.icon));
+const iconClass = computed(() => getIcon(props.icon));
+
+let colorClass = "";
+
+if (props.color === "primary") colorClass = "text-primary";
+if (props.color === "white") colorClass = "text-white";
 </script>
 
 <template>
-  <i :class="iconString"></i>
+  <i :class="[iconClass, colorClass]"></i>
 </template>

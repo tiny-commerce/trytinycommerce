@@ -12,7 +12,7 @@ withDefaults(
   }
 );
 
-const classes = "text-sm/6 text-gray-700 hover:text-primary";
+const classes = "font-bold uppercase text-gray-700 hover:text-primary";
 </script>
 
 <template>

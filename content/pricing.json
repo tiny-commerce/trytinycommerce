@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Startup",
+    "href": "#",
+    "price": 10,
+    "mostPopular": false,
+    "description": "The essentials to get your started while keep costs to a minimum.",
+    "features": [
+      {
+        "icon": null,
+        "description": "Higher Transaction Fees"
+      },
+      {
+        "icon": "yes",
+        "description": "Product Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Inventory Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Basic Customer Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Order Management"
+      },
+      {
+        "icon": "yes",
+        "description": "eCommerce Website"
+      },
+      {
+        "icon": "no",
+        "description": "Site Analytics"
+      },
+      {
+        "icon": "no",
+        "description": "Offer Subscriptions"
+      },
+      {
+        "icon": "no",
+        "description": "Local Store Management"
+      },
+      {
+        "icon": "no",
+        "description": "Shows/Event Management"
+      },
+      {
+        "icon": "no",
+        "description": "Sell In-Person with POS Hardware"
+      }
+    ]
+  },
+  {
+    "name": "Established",
+    "href": "#",
+    "price": 39,
+    "mostPopular": true,
+    "description": "A plan that scales with your rapidly growing business.",
+    "features": [
+      {
+        "icon": null,
+        "description": "Higher Transaction Fees"
+      },
+      {
+        "icon": "yes",
+        "description": "Product Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Inventory Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Customer Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Order Management"
+      },
+      {
+        "icon": "yes",
+        "description": "eCommerce Website"
+      },
+      {
+        "icon": "yes",
+        "description": "Site Analytics"
+      },
+      {
+        "icon": "yes",
+        "description": "Offer Subscriptions"
+      },
+      {
+        "icon": "yes",
+        "description": "Local Store Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Shows/Event Management"
+      },
+      {
+        "icon": "no",
+        "description": "Sell In-Person with POS Hardware"
+      }
+    ]
+  },
+  {
+    "name": "Veteran",
+    "href": "#",
+    "price": 89,
+    "mostPopular": false,
+    "description": "Dedicated support and infrastructure for your company.",
+    "features": [
+      {
+        "icon": null,
+        "description": "Higher Transaction Fees"
+      },
+      {
+        "icon": "yes",
+        "description": "Product Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Inventory Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Advanced Customer Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Order Management"
+      },
+      {
+        "icon": "yes",
+        "description": "eCommerce Website"
+      },
+      {
+        "icon": "yes",
+        "description": "Site Analytics"
+      },
+      {
+        "icon": "yes",
+        "description": "Offer Subscriptions"
+      },
+      {
+        "icon": "yes",
+        "description": "Local Store Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Advanced Shows/Event Management"
+      },
+      {
+        "icon": "yes",
+        "description": "Sell In-Person with POS Hardware"
+      }
+    ]
+  }
+]

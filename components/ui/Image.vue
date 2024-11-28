@@ -6,6 +6,7 @@ withDefaults(
     src: string;
     alt: string;
     width: number;
+    height?: number;
     preview?: boolean;
   }>(),
   {
@@ -15,5 +16,11 @@ withDefaults(
 </script>
 
 <template>
-  <Image :src="src" :alt="alt" :width="width" :preview="preview" />
+  <Image
+    :src="src"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    :preview="preview"
+  />
 </template>

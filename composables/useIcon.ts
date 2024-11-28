@@ -7,6 +7,7 @@ export enum IconList {
   Instagram = "instagram",
   Orders = "receipt",
   Website = "desktop",
+  X = "times",
 }
 
 export default function useIcon() {

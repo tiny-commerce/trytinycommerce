@@ -51,11 +51,11 @@ const faqs = [
         </h2>
         <p class="mt-6 text-base/7 text-gray-600">
           Have a different question and can’t find the answer you’re looking
-          for? Reach out to our support team by
-          <a
-            href="#"
-            class="font-semibold text-indigo-600 hover:text-indigo-500"
-            >sending us an email</a
+          for? Reach out to us via our
+          <NuxtLink
+            to="/contact"
+            class="font-semibold text-primary hover:underline"
+            >contact page</NuxtLink
           >
           and we’ll get back to you as soon as we can.
         </p>

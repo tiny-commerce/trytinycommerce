@@ -4,6 +4,7 @@ const appConfig = useAppConfig();
 useSeoMeta({
   title: `Blog | ${appConfig.businessName}`,
   description: "",
+  robots: appConfig.fullSite ? "index, follow" : "noindex, nofollow",
 });
 </script>
 

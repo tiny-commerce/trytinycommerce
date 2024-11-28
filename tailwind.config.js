@@ -17,8 +17,9 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ["Exo2", "sans-serif"],
+      logo: ["Sour Gummy", "sans-serif"],
+      heading: ["Sour Gummy", "sans-serif"],
     },
     extend: {},
   },

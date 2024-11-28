@@ -8,25 +8,23 @@ defineProps<{
 </script>
 
 <template>
-  <div class="px-6 pt-16 mb-12 sm:pt-20 sm:mb-16 lg:px-8">
-    <div class="mx-auto max-w-4xl text-center">
+  <div class="px-6 pt-12 mb-12 sm:pt-16 sm:mb-16 lg:px-8">
+    <div class="mx-auto max-w-5xl text-center">
       <p v-if="eyebrow" class="mb-2 text-base/7 font-semibold text-primary">
         {{ eyebrow }}
       </p>
-      <h1
-        class="text-5xl font-semibold tracking-tight text-surface-700 sm:text-7xl"
-      >
+
+      <UiHeading level="h1" size="xl" color="primary" class="text-8xl">
         {{ heading }}
-      </h1>
-      <h2
-        v-if="subheading"
-        class="mt-2 text-4xl tracking-tight text-surface-600 sm:text-6xl"
-      >
+      </UiHeading>
+
+      <UiHeading v-if="subheading" color="light" class="mt-2 text-7xl">
         {{ subheading }}
-      </h2>
+      </UiHeading>
+
       <p
         v-if="description"
-        class="max-w-3xl mt-8 mx-auto text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"
+        class="max-w-3xl mt-12 mx-auto text-pretty font-medium text-xl/9 sm:text-2xl/9"
       >
         {{ description }}
       </p>

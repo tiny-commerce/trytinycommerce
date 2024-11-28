@@ -1,11 +1,68 @@
 [
-  { "name": "Store Management" },
-  { "name": "Customer Management" },
-  { "name": "Inventory Management" },
-  { "name": "Supply Management" },
-  { "name": "eCommerce Website" },
-  { "name": "Analytics" },
-  { "name": "Discount Codes" },
-  { "name": "POS System" },
-  { "name": "Shipping Integration" }
+  {
+    "highlighted": true,
+    "name": "Product Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Inventory Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Customer Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Order Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "eCommerce Website",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Analytics",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Subscripton Service",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Discount Codes",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Local Store Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "Shows/Event Management",
+    "tag": "",
+    "description": ""
+  },
+  {
+    "highlighted": true,
+    "name": "POS System",
+    "tag": "",
+    "description": ""
+  }
 ]
