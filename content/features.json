@@ -1,68 +1,90 @@
 [
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "barcode",
+    "width": "lg",
     "name": "Product Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "calculator",
+    "width": "sm",
     "name": "Inventory Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "users",
+    "width": "sm",
     "name": "Customer Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "receipt",
+    "width": "sm",
     "name": "Order Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "shopping-cart",
+    "width": "sm",
     "name": "eCommerce Website",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "chart-bar",
+    "width": "sm",
     "name": "Analytics",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "gift",
+    "width": "sm",
     "name": "Subscripton Service",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "percentage",
+    "width": "sm",
     "name": "Discount Codes",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "shop",
+    "width": "sm",
     "name": "Local Store Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "calendar",
+    "width": "sm",
     "name": "Shows/Event Management",
-    "tag": "",
+    "heading": "",
     "description": ""
   },
   {
-    "highlighted": true,
+    "highlighted": false,
+    "icon": "qrcode",
+    "width": "sm",
     "name": "POS System",
-    "tag": "",
+    "heading": "",
     "description": ""
   }
 ]
