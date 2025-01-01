@@ -22,7 +22,7 @@ if (props.width === "md") widthClass += " lg:col-span-3";
 if (props.width === "lg") widthClass += " lg:col-span-4";
 
 let boxClasses =
-  "relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]";
+  "h-full flex flex-col p-4 pl-12 rounded-[calc(theme(borderRadius.lg)+1px)] bg-white";
 
 let shadowClasses =
   "absolute inset-px rounded-lg shadow ring-1 ring-black/5 pointer-events-none";
@@ -51,27 +51,20 @@ if (props.position === "br") {
 <template>
   <div :class="widthClass">
     <div :class="boxClasses">
-      <div class="px-10 py-6">
-        <div class="flex items-center gap-x-3">
-          <div
-            class="shrink-0 w-12 h-12 flex items-center justify-center rounded-full border-2 border-primary"
-          >
-            <UiIcon :icon="icon" />
-          </div>
-          <div>
-            <p class="text-sm/4 font-semibold text-primary uppercase">
-              {{ tag }}
-            </p>
+      <p class="text-sm/4 font-semibold text-primary uppercase">
+        {{ tag }}
+      </p>
 
-            <UiHeading level="h3" size="sm" color="light">
-              {{ heading }}
-            </UiHeading>
-          </div>
-        </div>
+      <UiHeading level="h3" size="sm" color="light">
+        {{ heading }}
+      </UiHeading>
 
-        <div class="mt-2 max-w-lg"><slot></slot></div>
-      </div>
+      <div class="mt-2 max-w-lg"><slot></slot></div>
     </div>
     <div :class="shadowClasses" />
+
+    <UiHexagon size="lg" class="absolute top-2 -left-4">
+      <UiIcon :icon="icon" color="white" class="text-2xl" />
+    </UiHexagon>
   </div>
 </template>

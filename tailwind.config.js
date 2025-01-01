@@ -19,7 +19,7 @@ export default {
     fontFamily: {
       sans: ["Exo2", "sans-serif"],
       logo: ["Sour Gummy", "sans-serif"],
-      heading: ["Sour Gummy", "sans-serif"],
+      heading: ["Exo2", "sans-serif"],
     },
     extend: {},
   },

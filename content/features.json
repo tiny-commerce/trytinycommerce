@@ -1,90 +1,81 @@
 [
   {
-    "highlighted": false,
     "icon": "barcode",
     "width": "lg",
-    "name": "Product Management",
-    "heading": "",
-    "description": ""
+    "name": "Products",
+    "heading": "From Idea to Product",
+    "description": "Come up with ideas, turning them into real products, and grow your brand."
   },
   {
-    "highlighted": false,
-    "icon": "calculator",
-    "width": "sm",
-    "name": "Inventory Management",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
-    "icon": "users",
-    "width": "sm",
-    "name": "Customer Management",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
-    "icon": "receipt",
-    "width": "sm",
-    "name": "Order Management",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
-    "icon": "shopping-cart",
-    "width": "sm",
-    "name": "eCommerce Website",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
     "icon": "chart-bar",
     "width": "sm",
     "name": "Analytics",
-    "heading": "",
-    "description": ""
+    "heading": "Chart Your Success",
+    "description": "Check the numbers to see what's working and what your fans love."
   },
   {
-    "highlighted": false,
-    "icon": "gift",
-    "width": "sm",
-    "name": "Subscripton Service",
-    "heading": "",
-    "description": ""
+    "icon": "mobile",
+    "width": "md",
+    "name": "Website",
+    "heading": "Showcase Your Work",
+    "description": "Your online space where you showcase your work, connect with your fans, and sell your products."
   },
   {
-    "highlighted": false,
-    "icon": "percentage",
-    "width": "sm",
-    "name": "Discount Codes",
-    "heading": "",
-    "description": ""
+    "icon": "calculator",
+    "width": "md",
+    "name": "Inventory Management",
+    "heading": "Keep Track of it All",
+    "description": "Make sure you've got what you need, and stay on top of stock so you always have stock to sell to your fans."
   },
+
   {
-    "highlighted": false,
-    "icon": "shop",
-    "width": "sm",
-    "name": "Local Store Management",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
-    "icon": "calendar",
-    "width": "sm",
-    "name": "Shows/Event Management",
-    "heading": "",
-    "description": ""
-  },
-  {
-    "highlighted": false,
     "icon": "qrcode",
     "width": "sm",
     "name": "POS System",
-    "heading": "",
-    "description": ""
+    "heading": "Sell Directly to Fans",
+    "description": "Easily process sales, track inventory, and manage payments when selling in person"
+  },
+
+  {
+    "icon": "receipt",
+    "width": "lg",
+    "name": "Order Management",
+    "heading": "Handle Orders like a Pro",
+    "description": "Stay on top of your orders, making sure everything gets shipped on time, and keeping customers in the loop from purchase to delivery."
+  },
+  {
+    "icon": "users",
+    "width": "md",
+    "name": "Customer Relations",
+    "heading": "Connect with Your Fans",
+    "description": "Keep your fans happy, respond to their needs, and building a loyal community around your work."
+  },
+  {
+    "icon": "gift",
+    "width": "md",
+    "name": "Subscripton Service",
+    "heading": "Effortless Subscriptions",
+    "description": "Offer fans exclusive content in exchange for a regular fee, giving you a steady income and closer fan connections."
+  },
+  {
+    "icon": "shop",
+    "width": "sm",
+    "name": "Local Store Management",
+    "heading": "Wholesale With Ease",
+    "description": "Make sure your products stay stocked, orders get fulfilled, and everything runs smoothly across all the stores that carry your work."
+  },
+  {
+    "icon": "calendar",
+    "width": "sm",
+    "name": "Shows/Event Management",
+    "heading": "Track Your Shows",
+    "description": "Keep track show dates and plan ahead so you can showcase your work and connect with fans."
+  },
+  {
+    "icon": "percentage",
+    "width": "sm",
+    "name": "Discount Codes",
+    "heading": "Discounts -> Sales",
+    "description": "Discount codes are a fun way to offer your loyal fans with special deals."
   }
 ]

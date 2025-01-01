@@ -2,9 +2,7 @@
   <div class="bg-surface-700">
     <div class="px-6 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
-        <UiHeading color="white" size="md">
-          <Logo mode="dark" /> Coming Soon
-        </UiHeading>
+        <UiHeading color="white" size="md">MakerBiz Coming Soon</UiHeading>
         <p
           class="mx-auto mt-6 max-w-3xl text-pretty text-lg/8 text-surface-200"
         >

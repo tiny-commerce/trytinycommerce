@@ -22,7 +22,7 @@ if (props.size === "sm") headingClasses += " text-3xl";
 if (props.color === "dark") headingClasses += " text-surface-800";
 if (props.color === "default") headingClasses += " text-surface-700";
 if (props.color === "light") headingClasses += " text-surface-500";
-if (props.color === "white") headingClasses += " text-surface-100";
+if (props.color === "white") headingClasses += " text-surface-50";
 if (props.color === "primary") headingClasses += " text-primary";
 </script>
 

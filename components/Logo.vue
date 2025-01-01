@@ -1,24 +1,20 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    mode?: "light" | "dark";
+    size?: "sm" | "md" | "lg";
   }>(),
   {
-    mode: "light",
+    size: "md",
   }
 );
 
-const bizColor =
-  props.mode === "light" ? "text-surface-600" : "text-surface-100";
+const height = ref("80px");
+
+if (props.size === "sm") height.value = "40px";
+if (props.size === "md") height.value = "80px";
+if (props.size === "lg") height.value = "120px";
 </script>
 
 <template>
-  <p class="inline text-6xl font-bold font-logo">
-    <!-- Don't fix this, it has to look like this for spacing -->
-    <span class="text-primary">
-      M<small class="uppercase text-[70%]">aker</small></span
-    ><span :class="bizColor"
-      >B<small class="uppercase text-[70%]">iz</small></span
-    >
-  </p>
+  <NuxtImg src="/logo.png" alt="MakerBiz" :height="height" />
 </template>

@@ -13,10 +13,10 @@ const props = withDefaults(defineProps<ComponentProps>(), {
 const { getIcon } = useIcon();
 const iconClass = computed(() => getIcon(props.icon));
 
-let colorClass = "";
+let colorClass = ref("");
 
-if (props.color === "primary") colorClass = "text-primary";
-if (props.color === "white") colorClass = "text-white";
+if (props.color === "primary") colorClass.value = "text-primary";
+if (props.color === "white") colorClass.value = "text-white";
 </script>
 
 <template>

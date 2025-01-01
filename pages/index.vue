@@ -6,14 +6,19 @@ useSeoMeta({
   description: "",
 });
 
+const { data: about } = await useAsyncData("about", () =>
+  queryContent("/about").findOne()
+);
 const { body: features } = await queryContent("/features").findOne();
 </script>
 
 <template>
   <div>
     <PageHero />
+    <PageDefinitions />
     <PageCTA />
-    <PageFeatureHighlights :features="features" />
+    <PageAbout v-if="about" :about="about" />
+    <PageFeatureHighlights v-if="features" :features="features" />
     <!-- <PageBlogHighlights /> -->
   </div>
 </template>
