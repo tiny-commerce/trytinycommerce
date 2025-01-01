@@ -8,17 +8,17 @@ defineProps<{
 </script>
 
 <template>
-  <div class="px-6 pt-12 mb-12 sm:pt-16 sm:mb-16 lg:px-8">
+  <div class="px-6 lg:px-8 pt-4 pb-12 sm:py-16">
     <div class="mx-auto max-w-5xl text-center">
       <p v-if="eyebrow" class="mb-2 text-base/7 font-semibold text-primary">
         {{ eyebrow }}
       </p>
 
-      <UiHeading level="h1" size="xl" color="primary" class="text-8xl">
+      <UiHeading level="h1" size="xl" color="primary">
         {{ heading }}
       </UiHeading>
 
-      <UiHeading v-if="subheading" color="light" class="mt-2 text-7xl">
+      <UiHeading v-if="subheading" size="lg" color="light" class="mt-8 md:mt-2">
         {{ subheading }}
       </UiHeading>
 

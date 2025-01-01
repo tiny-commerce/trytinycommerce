@@ -11,7 +11,10 @@ defineProps<{
         <UiHeading size="md">How We'll Take Care of Business</UiHeading>
       </div>
 
-      <div v-if="features.length" class="grid grid-cols-1 gap-8 lg:grid-cols-6">
+      <div
+        v-if="features.length"
+        class="grid grid-cols-1 gap-8 lg:grid-cols-6 mx-auto md:max-w-xl lg:max-w-none"
+      >
         <PageFeatureHighlightsItem
           v-for="feature in features"
           :key="feature.name"

@@ -12,18 +12,22 @@ const props = withDefaults(
   }
 );
 
-let headingClasses = "text-balance font-heading font-bold";
+let headingClasses = ref("text-balance font-heading font-bold");
 
-if (props.size === "xl") headingClasses += " text-7xl";
-if (props.size === "lg") headingClasses += " text-6xl";
-if (props.size === "md") headingClasses += " text-5xl";
-if (props.size === "sm") headingClasses += " text-3xl";
+if (props.size === "xl")
+  headingClasses.value += " text-6xl md:text-7xl lg:text-8xl";
+if (props.size === "lg")
+  headingClasses.value += " text-4xl md:text-5xl lg:text-6xl";
+if (props.size === "md")
+  headingClasses.value += " text-3xl md:text-4xl lg:text-5xl";
+if (props.size === "sm")
+  headingClasses.value += " text-xl md:text-2xl lg:text-3xl";
 
-if (props.color === "dark") headingClasses += " text-surface-800";
-if (props.color === "default") headingClasses += " text-surface-700";
-if (props.color === "light") headingClasses += " text-surface-500";
-if (props.color === "white") headingClasses += " text-surface-50";
-if (props.color === "primary") headingClasses += " text-primary";
+if (props.color === "dark") headingClasses.value += " text-surface-800";
+if (props.color === "default") headingClasses.value += " text-surface-700";
+if (props.color === "light") headingClasses.value += " text-surface-500";
+if (props.color === "white") headingClasses.value += " text-surface-50";
+if (props.color === "primary") headingClasses.value += " text-primary";
 </script>
 
 <template>

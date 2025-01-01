@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <LayoutContainer>
-    <div class="prose-xl max-w-none pb-8 px-20">
+    <div class="prose-xl max-w-none pb-8 px-2 md:px-12 lg:px-20">
       <ContentRenderer :value="about"></ContentRenderer>
     </div>
   </LayoutContainer>
