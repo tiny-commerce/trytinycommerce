@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const appConfig = useAppConfig();
+const {businessName} = useCompanyInfo();
 
 useSeoMeta({
-  title: `Privacy Policy | ${appConfig.businessName}`,
+  title: `Privacy Policy | ${businessName}`,
   description: "",
 });
 
@@ -12,7 +12,7 @@ const { data: page } = await useAsyncData(
 );
 
 const heading = page.value?.title ? page.value.title : "Privacy";
-const lastUpdated = page.value?.lastUpdated ? page.value.lastUpdated : null;
+const lastUpdated = page.value?.lastUpdated ? page.value.lastUpdated : 'Jan 1st, 2025';
 </script>
 
 <template>

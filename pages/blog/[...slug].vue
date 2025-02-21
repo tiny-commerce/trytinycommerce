@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const appConfig = useAppConfig();
+const {businessName} = useCompanyInfo();
 
 useSeoMeta({
-  title: `Post | ${appConfig.businessName}`,
+  title: `Post | ${businessName}`,
   description: "",
-  robots: appConfig.fullSite ? "index, follow" : "noindex, nofollow",
 });
 </script>
 

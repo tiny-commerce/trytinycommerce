@@ -1,12 +1,6 @@
 export enum IconList {
-  ArrowLongRight = "arrow-right",
-  Calendar = "calendar",
-  Cart = "shopping-cart",
-  Chart = "chart-bar",
   Check = "check",
-  Instagram = "instagram",
-  Orders = "receipt",
-  Website = "desktop",
+  Menu = "bars",
   X = "times",
 }
 

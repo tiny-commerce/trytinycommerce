@@ -35,7 +35,7 @@ const features = [
       >
         <div class="lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
-            <h2 class="text-base/7 font-semibold text-indigo-600">
+            <h2 class="text-base/7 font-semibold text-primary">
               Deploy faster
             </h2>
             <p
@@ -59,7 +59,7 @@ const features = [
                 <dt class="inline font-semibold text-gray-900">
                   <component
                     :is="feature.icon"
-                    class="absolute left-1 top-1 size-5 text-indigo-600"
+                    class="absolute left-1 top-1 size-5 text-primary"
                     aria-hidden="true"
                   />
                   {{ feature.name }}

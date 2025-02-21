@@ -30,9 +30,7 @@ const fields = {
         <p>
           By submitting this form you agree to our
           {{ " " }}
-          <a href="/privacy" class="font-semibold text-primary"
-            >privacy&nbsp;policy</a
-          >.
+          <a href="/privacy" class="font-semibold text-primary">privacy policy</a>.
         </p>
       </div>
     </div>

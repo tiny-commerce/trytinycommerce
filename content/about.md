@@ -4,4 +4,4 @@ I'm a software engineer and entrepuener. I also support my maker wife with her b
 
 We currently use Shopify, and it sucks! I've tried for months to get it to work for our needs. But it has too many features we don't need and is lackey some we do need. So obviously that means I have to build my own version of Shopify.
 
-And now MakerBiz will be born.
+And now tinyCommerce will be born.

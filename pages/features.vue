@@ -2,14 +2,13 @@
 const {businessName} = useCompanyInfo();
 
 useSeoMeta({
-  title: `Blog | ${businessName}`,
+  title: `Features | ${businessName}`,
   description: "",
 });
 </script>
 
 <template>
-  <div>
-    <PageHeader heading="From the Blog" />
-    <BlogList />
-  </div>
+  <PageHeader heading="Features"/>
+  <FeatureMain/>
+  <FeatureList/>
 </template>

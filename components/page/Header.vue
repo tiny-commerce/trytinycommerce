@@ -14,11 +14,11 @@ defineProps<{
         {{ eyebrow }}
       </p>
 
-      <UiHeading level="h1" size="xl" color="primary">
+      <UiHeading level="h1" size="lg" color="primary">
         {{ heading }}
       </UiHeading>
 
-      <UiHeading v-if="subheading" size="lg" color="light" class="mt-8 md:mt-2">
+      <UiHeading v-if="subheading" size="md" color="light" class="mt-8 md:mt-2">
         {{ subheading }}
       </UiHeading>
 
@@ -28,10 +28,6 @@ defineProps<{
       >
         {{ description }}
       </p>
-      <!-- <div class="mt-6 flex items-center justify-center gap-x-6">
-        <UiLink to="#" label="Get Started" button />
-        <UiLink to="#" label="Learn More" :icon="IconList.ArrowLongRight" />
-      </div> -->
     </div>
   </div>
 </template>

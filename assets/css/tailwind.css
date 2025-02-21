@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.text-tiny {
+    @apply font-handwritten font-bold italic text-[130%] text-[--p-secondary-500];
+}
+
 @tailwind utilities;

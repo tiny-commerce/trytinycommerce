@@ -1,4 +1,4 @@
-import { MakerBizTheme } from "./assets/theme";
+import { tinyCommerceTheme } from "./assets/theme";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   primevue: {
     options: {
       theme: {
-        preset: MakerBizTheme,
+        preset: tinyCommerceTheme,
         options: {
           darkModeSelector: "light",
         },

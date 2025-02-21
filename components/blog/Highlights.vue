@@ -51,7 +51,7 @@ const posts = [
 
 <template>
   <div
-    class="mx-auto mb-16 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8"
+    class="mx-auto py-16 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8"
   >
     <article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
       <time
@@ -74,7 +74,7 @@ const posts = [
         <div class="flex">
           <a
             :href="featuredPost.href"
-            class="text-sm/6 font-semibold text-indigo-600"
+            class="text-sm/6 font-semibold text-primary"
             aria-describedby="featured-post"
             >Continue reading <span aria-hidden="true">&rarr;</span></a
           >

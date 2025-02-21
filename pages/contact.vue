@@ -1,16 +1,15 @@
 <script setup lang="ts">
-const appConfig = useAppConfig();
+const {businessName} = useCompanyInfo();
 
 useSeoMeta({
-  title: `Contact | ${appConfig.businessName}`,
+  title: `Contact | ${businessName}`,
   description: "",
-  robots: appConfig.fullSite ? "index, follow" : "noindex, nofollow",
 });
 </script>
 
 <template>
   <div>
     <PageHeader heading="Contact Us" />
-    <PageContact />
+    <FormContact />
   </div>
 </template>

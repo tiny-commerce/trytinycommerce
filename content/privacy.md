@@ -1,8 +1,8 @@
 ---
 title: "Privacy Policy"
-companyName: "MakerBiz, LLC"
-website: "mymakerbiz.com"
-email: "privacy@mymakerbiz.com"
+companyName: "tinyCommerce, LLC"
+website: "mytinyCommerce.com"
+email: "privacy@mytinyCommerce.com"
 lastUpdated: "Nov 21st, 2024"
 ---
 

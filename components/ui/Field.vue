@@ -2,14 +2,14 @@
 import Message from "primevue/message";
 
 defineProps<{
-  label: string;
+  label?: string;
   error?: string | string[];
 }>();
 </script>
 
 <template>
   <div class="flex flex-col gap-1">
-    <label>{{ label }}</label>
+    <label v-if="label">{{ label }}</label>
     <slot></slot>
     <Message v-if="error" severity="error" size="small" variant="simple">
       {{ error }}

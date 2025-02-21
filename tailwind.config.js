@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+// const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -18,8 +18,7 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Exo2", "sans-serif"],
-      logo: ["Sour Gummy", "sans-serif"],
-      heading: ["Exo2", "sans-serif"],
+      handwritten: ["Caveat", "sans-serif"],
     },
     extend: {},
   },
