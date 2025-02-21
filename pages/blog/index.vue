@@ -8,8 +8,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <PageHeader heading="From the Blog" />
-    <BlogList />
-  </div>
+  <PageHeader eyebrow="Blog" heading="Thoughts about crafting and business" />
+  <BlogList />
 </template>

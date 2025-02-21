@@ -5,12 +5,14 @@ defineProps<{
   description?: string;
   eyebrow?: string;
 }>();
+
+const slots = useSlots();
 </script>
 
 <template>
   <div class="px-6 lg:px-8 pt-4 pb-12 sm:py-16">
     <div class="mx-auto max-w-5xl text-center">
-      <p v-if="eyebrow" class="mb-2 text-base/7 font-semibold text-primary">
+      <p v-if="eyebrow" class="mb-8 text-xl uppercase text-surface-500 tracking-wide">
         {{ eyebrow }}
       </p>
 
@@ -18,15 +20,12 @@ defineProps<{
         {{ heading }}
       </UiHeading>
 
-      <UiHeading v-if="subheading" size="md" color="light" class="mt-8 md:mt-2">
+      <UiHeading v-if="subheading" size="sm" color="light" class="mt-8 md:mt-2">
         {{ subheading }}
       </UiHeading>
 
-      <p
-        v-if="description"
-        class="max-w-3xl mt-12 mx-auto text-pretty font-medium text-xl/9 sm:text-2xl/9"
-      >
-        {{ description }}
+      <p v-if="slots.default" class="max-w-4xl mt-4 mx-auto text-pretty font-medium text-xl/9 sm:text-2xl/9">
+        <slot />
       </p>
     </div>
   </div>

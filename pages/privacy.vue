@@ -16,13 +16,8 @@ const lastUpdated = page.value?.lastUpdated ? page.value.lastUpdated : 'Jan 1st,
 </script>
 
 <template>
-  <div>
-    <PageHeader
-      :heading="heading"
-      :description="`Our Privacy Policy was last updated on ${lastUpdated}`"
-    />
-    <div class="prose prose-slate max-w-3xl mx-auto">
-      <ContentDoc />
-    </div>
+  <PageHeader :heading="heading" :subheading="`Last updated on ${lastUpdated}`"/>
+  <div class="prose prose-slate max-w-3xl mx-auto">
+    <ContentDoc />
   </div>
 </template>

@@ -9,6 +9,6 @@ useSeoMeta({
 
 <template>
   <SectionHero/>
-  <FeatureHighlights features="[]"/>
+  <FeatureHighlights/>
   <BlogHighlights/>
 </template>

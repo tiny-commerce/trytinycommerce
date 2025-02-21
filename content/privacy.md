@@ -1,9 +1,9 @@
 ---
 title: "Privacy Policy"
-companyName: "tinyCommerce, LLC"
-website: "mytinyCommerce.com"
-email: "privacy@mytinyCommerce.com"
-lastUpdated: "Nov 21st, 2024"
+companyName: "TinyCommerce, LLC"
+website: "TryTinyCommerce.com"
+email: "privacy@TryTinyCommerce.com"
+lastUpdated: "Feb 1st, 2025"
 ---
 
 This Privacy Policy describes how {{ $doc.companyName }} (the "**Site**", "**we**", "**us**", or "**our**") collects, uses, and discloses your personal information when you visit {{ $doc.website }} (the "**Site**") or otherwise communicate with us (collectively, the "**Services**"). For purposes of this Privacy Policy, "**you**" and "**your**" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.

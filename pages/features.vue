@@ -8,7 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <PageHeader heading="Features"/>
+  <PageHeader eyebrow="Features" heading="Meeting the needs of small business crafters."/>
   <FeatureMain/>
   <FeatureList/>
 </template>

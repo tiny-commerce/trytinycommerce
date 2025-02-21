@@ -39,10 +39,9 @@ const sections = [
 </script>
 
 <template>
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <PageContainer class="py-12">
       <!-- xs to lg -->
-      <div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
+      <div class="mx-auto max-w-md space-y-8 lg:hidden">
         <section v-for="tier in tiers" :key="tier.id" :class="[tier.mostPopular ? 'rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200' : '', 'p-8']">
           <h3 :id="tier.id" class="text-sm/6 font-semibold text-gray-900">{{ tier.name }}</h3>
           <p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
@@ -70,7 +69,7 @@ const sections = [
       </div>
 
       <!-- lg+ -->
-      <div class="isolate mt-20 hidden lg:block">
+      <div class="isolate hidden lg:block">
         <div class="relative -mx-8">
           <div v-if="tiers.some((tier) => tier.mostPopular)" class="absolute inset-x-4 inset-y-0 -z-10 flex">
             <div class="flex w-1/4 px-4" aria-hidden="true" :style="{ marginLeft: `${(tiers.findIndex((tier) => tier.mostPopular) + 1) * 25}%` }">
@@ -132,6 +131,5 @@ const sections = [
           </table>
         </div>
       </div>
-    </div>
-  </div>
+    </PageContainer>
 </template>
