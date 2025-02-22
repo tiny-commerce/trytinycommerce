@@ -22,7 +22,7 @@ export default defineContentConfig(
           type:   "data",
           schema: z.object(
             {
-              icon:        z.nativeEnum(IconList),
+              icon:        z.enum(["users", "chart-bar", "mobile", "desktop"]),
               name:        z.string(),
               description: z.string(),
             }),
