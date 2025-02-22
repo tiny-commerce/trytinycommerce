@@ -122,4 +122,4 @@ Please note that we may transfer, store and process your personal information ou
 
 ## Contact
 
-Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please email us at{{ $doc.email }}
+Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please email us at {{ $doc.email }}
