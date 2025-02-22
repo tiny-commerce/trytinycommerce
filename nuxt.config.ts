@@ -11,6 +11,7 @@ export default defineNuxtConfig(
       "@nuxt/image",
       "@nuxtjs/tailwindcss",
       "@primevue/nuxt-module",
+      "@nuxthub/core",
     ],
     primevue:          {
       options: {
