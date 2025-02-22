@@ -7,6 +7,13 @@ export default defineContentConfig(
         {
           source: "content/blog/*.md",
           type:   "page",
+          schema: z.object(
+            {
+              isPublished: z.boolean(),
+              title:       z.string(),
+              description: z.string(),
+              writtenOn:   z.date(),
+            }),
         },
       ),
       features: defineCollection(
@@ -15,7 +22,7 @@ export default defineContentConfig(
           type:   "data",
           schema: z.object(
             {
-              icon:        z.string(),
+              icon:        z.nativeEnum(IconList),
               name:        z.string(),
               description: z.string(),
             }),
