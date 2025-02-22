@@ -5,7 +5,6 @@ export default function useMenu() {
     headerNavigation: [
       { label: 'Features', to: '/features' },
       { label: 'Pricing', to: '/pricing' },
-      { label: 'FAQ', to: '/faq' },
       { label: "Blog", to: "/blog" },
     ],
     mobileNavigation: [
@@ -14,6 +13,7 @@ export default function useMenu() {
       { label: "Pricing", to: "/pricing" },
       { label: "FAQ", to: "/faq" },
       { label: "Blog", to: "/blog" },
+      { label: "Contact", to: "/contact" },
     ],
     footerNavigation: [
       { label: "Home", to: "/" },
