@@ -1,6 +1,6 @@
 ---
 isPublished: true
-title: "Behind the Scenes of Tiny Commerce"
+title: Behind the Scenes of Tiny Commerce
 description: ""
-writtenOn: "2-22-2025"
+writtenOn: 2-22-2025
 ---

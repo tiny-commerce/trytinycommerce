@@ -1,6 +1,6 @@
 ---
 isPublished: true
-title: "Why we're using Add-on Pricing"
+title: Why we're using Add-on Pricing
 description: ""
-writtenOn: "2-22-2025"
+writtenOn: 2-22-2025
 ---

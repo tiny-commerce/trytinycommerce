@@ -1,6 +1,6 @@
 ---
 isPublished: true
-title: "The TinyCommerce Founder"
+title: The TinyCommerce Founder
 description: ""
-writtenOn: "2-22-2025"
+writtenOn: 2-22-2025
 ---
