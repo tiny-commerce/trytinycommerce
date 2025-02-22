@@ -5,7 +5,7 @@ export default defineContentConfig(
     collections: {
       blog:     defineCollection(
         {
-          source: "content/blog/*.md",
+          source: "blog/*.md",
           type:   "page",
           schema: z.object(
             {
@@ -18,7 +18,7 @@ export default defineContentConfig(
       ),
       features: defineCollection(
         {
-          source: "content/features/*.yml",
+          source: "features/*.yml",
           type:   "data",
           schema: z.object(
             {
