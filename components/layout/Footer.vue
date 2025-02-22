@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const {startYear, businessName} = useCompanyInfo();
 const {footerNavigation} = useMenu();
 
@@ -15,12 +15,12 @@ if (currentYear > startYear) {
 
   <footer class="pt-4 pb-8">
     <PageContainer>
-      <NuxtLink to="/" class="flex justify-center">
+      <NuxtLink class="flex justify-center" to="/">
         <Logo />
       </NuxtLink>
 
-      <nav class="mt-8 mb-4 flex flex-wrap justify-center gap-x-8" aria-label="Footer">
-        <UiLink v-for="link in footerNavigation" :key="link.label" :to="link.to" :label="link.label" />
+      <nav aria-label="Footer" class="mt-8 mb-4 flex flex-wrap justify-center gap-x-8">
+        <UiLink v-for="link in footerNavigation" :key="link.label" :label="link.label" :to="link.to" />
       </nav>
 
       <p class="text-center text-sm/6 text-surface-500">

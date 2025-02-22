@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Checkbox from "primevue/checkbox";
-import { ref } from "vue";
+import {ref} from "vue";
 
 const checked = ref(false);
 </script>

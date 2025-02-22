@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Paginator from "primevue/paginator";
 </script>
 
 <template>
   <Paginator
+    :rows="10"
     :template="{
       '640px': 'PrevPageLink CurrentPageReport NextPageLink',
       '960px':
@@ -13,7 +14,6 @@ import Paginator from "primevue/paginator";
       default:
         'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink JumpToPageDropdown JumpToPageInput',
     }"
-    :rows="10"
     :totalRecords="120"
   >
   </Paginator>

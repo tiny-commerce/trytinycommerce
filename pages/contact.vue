@@ -1,10 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const {businessName} = useCompanyInfo();
 
 useSeoMeta({
-  title: `Contact | ${businessName}`,
-  description: "",
-});
+             title:       `Contact | ${businessName}`,
+             description: "",
+           });
 </script>
 
 <template>

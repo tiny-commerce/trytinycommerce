@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import InputText from "primevue/inputtext";
 
 const model = defineModel();
 </script>
 
 <template>
-  <InputText type="text" :model="model" fluid />
+  <InputText :model="model" fluid type="text" />
 </template>

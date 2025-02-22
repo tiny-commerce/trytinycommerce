@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 defineProps<{
   src: string;
   alt: string;
@@ -11,11 +11,7 @@ defineProps<{
   >
     <div>
       <UiImage
-        :src="src"
-        :alt="alt"
-        :width="2432"
-        :height="300"
-        class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+        :alt="alt" :height="300" :src="src" :width="2432" class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
       />
     </div>
   </div>

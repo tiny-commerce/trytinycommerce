@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const fields = {
-  firstName: "",
-  lastName: "",
+  firstName:    "",
+  lastName:     "",
   emailAddress: "",
-  message: "",
+  message:      "",
 };
 </script>
 
@@ -28,14 +28,12 @@ const fields = {
       </div>
       <div class="sm:col-span-2">
         <p>
-          By submitting this form you agree to our
-          {{ " " }}
-          <a href="/privacy" class="font-semibold text-primary">privacy policy</a>.
-        </p>
+          By submitting this form you agree to our {{ " " }} <a class="font-semibold text-primary" href="/privacy">privacy
+          policy</a>. </p>
       </div>
     </div>
     <div class="mt-10">
-      <UiButton label="Send Message" type="submit" fullWidth />
+      <UiButton fullWidth label="Send Message" type="submit" />
     </div>
   </UiForm>
 </template>

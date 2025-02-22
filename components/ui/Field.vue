@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Message from "primevue/message";
 
 defineProps<{
@@ -12,7 +12,7 @@ defineProps<{
     <label v-if="label" class="mb-1">{{ label }}</label>
     <slot></slot>
 
-    <Message v-if="error" severity="error" size="small" variant="simple" class="mt-1">
+    <Message v-if="error" class="mt-1" severity="error" size="small" variant="simple">
       {{ error }}
     </Message>
   </div>

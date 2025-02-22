@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import type { IconList } from "~/composables/useIcon";
+<script lang="ts" setup>
+import type {IconList} from "~/composables/useIcon";
 
 interface ComponentProps {
   icon: IconList;
@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<ComponentProps>(), {
   color: "primary",
 });
 
-const { getIcon } = useIcon();
+const {getIcon} = useIcon();
 const iconClass = computed(() => getIcon(props.icon));
 
 let colorClass = ref("");

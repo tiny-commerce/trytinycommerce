@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
     level?: "h1" | "h2" | "h3" | "h4" | "p";
@@ -31,9 +31,19 @@ if (props.color === "primary") headingClasses.value += " text-primary";
 </script>
 
 <template>
-  <h1 v-if="level === 'h1'" :class="headingClasses"><slot></slot></h1>
-  <h2 v-else-if="level === 'h2'" :class="headingClasses"><slot></slot></h2>
-  <h3 v-else-if="level === 'h3'" :class="headingClasses"><slot></slot></h3>
-  <h4 v-else-if="level === 'h4'" :class="headingClasses"><slot></slot></h4>
-  <p v-else-if="level === 'p'" :class="headingClasses"><slot></slot></p>
+  <h1 v-if="level === 'h1'" :class="headingClasses">
+    <slot></slot>
+  </h1>
+  <h2 v-else-if="level === 'h2'" :class="headingClasses">
+    <slot></slot>
+  </h2>
+  <h3 v-else-if="level === 'h3'" :class="headingClasses">
+    <slot></slot>
+  </h3>
+  <h4 v-else-if="level === 'h4'" :class="headingClasses">
+    <slot></slot>
+  </h4>
+  <p v-else-if="level === 'p'" :class="headingClasses">
+    <slot></slot>
+  </p>
 </template>

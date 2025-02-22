@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import { Form } from "@primevue/forms";
-import { reactive } from "vue";
-import { useToast } from "primevue/usetoast";
+<script lang="ts" setup>
+import {Form} from "@primevue/forms";
+import {reactive} from "vue";
+import {useToast} from "primevue/usetoast";
 
 const toast = useToast();
 
@@ -23,23 +23,20 @@ const initialValues = reactive(props.fields);
 //   };
 // };
 
-const onFormSubmit = ({ valid }: any) => {
+const onFormSubmit = ({valid}: any) => {
   if (valid) {
     toast.add({
-      severity: "success",
-      summary: "Form is submitted.",
-      life: 3000,
-    });
+                severity: "success",
+                summary:  "Form is submitted.",
+                life:     3000,
+              });
   }
 };
 </script>
 
 <template>
   <Form
-    v-slot="$form"
-    :initialValues
-    @submit="onFormSubmit"
-    class="flex flex-col gap-4"
+    v-slot="$form" :initialValues class="flex flex-col gap-4" @submit="onFormSubmit"
   >
     <slot></slot>
   </Form>

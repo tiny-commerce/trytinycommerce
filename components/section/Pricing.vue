@@ -1,135 +1,127 @@
 <script setup>
-import { CheckIcon, MinusIcon } from '@heroicons/vue/20/solid'
+import {CheckIcon} from "@heroicons/vue/20/solid";
 
-const tiers = [
-  { name: 'Starter', id: 'tier-starter', href: '#', priceMonthly: '$19', mostPopular: false },
-  { name: 'Growth', id: 'tier-growth', href: '#', priceMonthly: '$49', mostPopular: true },
-  { name: 'Scale', id: 'tier-scale', href: '#', priceMonthly: '$99', mostPopular: false },
-]
+const includedFeatures = [
+  "eCommerce Website w/ Custom Domain",
+  "Simple CRM",
+  "Customer Portal",
+  "Inventory Management",
+  "Product Variants, Collections & Groups",
+  "Schedule Events",
+  "Discount Codes",
+  "Local Store Management",
+  "Wholesale Invoicing w/ ACH Payments",
+  "Reporting and Analytics",
+];
+const bottomFeature = "Unlimited Products, Customers, Users, and Everything Else";
 
-const sections = [
+const basePrice = "35";
+const transactionPricingOnline = "2.9% + 30¢";
+const transactionPricingInPerson = "2.7% + 5¢";
+
+const addOns = [
   {
-    name: 'Features',
-    features: [
-      { name: 'Edge content delivery', tiers: { Starter: true, Growth: true, Scale: true } },
-      { name: 'Custom domains', tiers: { Starter: '1', Growth: '3', Scale: 'Unlimited' } },
-      { name: 'Team members', tiers: { Starter: '3', Growth: '20', Scale: 'Unlimited' } },
-      { name: 'Single sign-on (SSO)', tiers: { Starter: false, Growth: false, Scale: true } },
-    ],
+    name:              "POS System",
+    price:             "40",
+    additionalPricing: "Requires hardware purchase",
+    description:       `Sell in person with POS hardware. Accept credit cards at a discounted rate of ${transactionPricingInPerson}.`,
   },
   {
-    name: 'Reporting',
-    features: [
-      { name: 'Advanced analytics', tiers: { Starter: true, Growth: true, Scale: true } },
-      { name: 'Basic reports', tiers: { Starter: false, Growth: true, Scale: true } },
-      { name: 'Professional reports', tiers: { Starter: false, Growth: false, Scale: true } },
-      { name: 'Custom report builder', tiers: { Starter: false, Growth: false, Scale: true } },
-    ],
+    name:              "In-App Shipping",
+    price:             "25",
+    additionalPricing: "Plus shipping rates",
+    description:       "Print shipping labels, email a tracking code to your customers, get insurance, and schedule a carrier pickup.",
   },
   {
-    name: 'Support',
-    features: [
-      { name: '24/7 online support', tiers: { Starter: true, Growth: true, Scale: true } },
-      { name: 'Quarterly workshops', tiers: { Starter: false, Growth: true, Scale: true } },
-      { name: 'Priority phone support', tiers: { Starter: false, Growth: false, Scale: true } },
-      { name: '1:1 onboarding tour', tiers: { Starter: false, Growth: false, Scale: true } },
-    ],
+    name:              "Collect Sales Tax",
+    price:             "20",
+    additionalPricing: "Plus 50¢ per transaction",
+    description:       "More templates and customization options for your eCommerce website. Ability to upload CSS files for a truly custom website.",
   },
-]
+  {
+    name:        "Subscriptions",
+    price:       "10",
+    description: "Send your customers a subscription box and get recurring revenue. Allow customers to manage subscriptions via their customer portal.",
+  },
+  {
+    name:        "Digital Products",
+    price:       "15",
+    description: "Store, sell and deliver digital files to your customers. Allow customers to manage downloads via their customer portal.",
+  },
+  {
+    name:        "Email Newsletter",
+    price:       "15",
+    description: "Let your customers signup and receive a regular email newsletter. Includes 3000 emails per month.",
+  },
+];
 </script>
 
 <template>
-    <PageContainer class="py-12">
-      <!-- xs to lg -->
-      <div class="mx-auto max-w-md space-y-8 lg:hidden">
-        <section v-for="tier in tiers" :key="tier.id" :class="[tier.mostPopular ? 'rounded-xl bg-gray-400/5 ring-1 ring-inset ring-gray-200' : '', 'p-8']">
-          <h3 :id="tier.id" class="text-sm/6 font-semibold text-gray-900">{{ tier.name }}</h3>
-          <p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
-            <span class="text-4xl font-semibold">{{ tier.priceMonthly }}</span>
-            <span class="text-sm font-semibold">/month</span>
-          </p>
-          <a :href="tier.href" :aria-describedby="tier.id" :class="[tier.mostPopular ? 'bg-primary text-white hover:bg-indigo-500' : 'text-primary ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300', 'mt-8 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary']">Buy plan</a>
-          <ul role="list" class="mt-10 space-y-4 text-sm/6 text-gray-900">
-            <li v-for="section in sections" :key="section.name">
-              <ul role="list" class="space-y-4">
-                <template v-for="feature in section.features" :key="feature.name">
-                  <li v-if="feature.tiers[tier.name]" class="flex gap-x-3">
-                    <CheckIcon class="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                    <span>
-                      {{ feature.name }}
-                      {{ ' ' }}
-                      <span v-if="typeof feature.tiers[tier.name] === 'string'" class="text-sm/6 text-gray-500">({{ feature.tiers[tier.name] }})</span>
-                    </span>
-                  </li>
-                </template>
-              </ul>
-            </li>
-          </ul>
-        </section>
+  <PageContainer>
+    <div class="mx-auto max-w-2xl rounded-3xl ring-1 ring-surface-200 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+        <h3 class="text-3xl font-semibold tracking-tight text-surface-700">One Base Price</h3>
+        <p class="mt-2 text-base/7 text-surface-600">
+          Instead of having to pay for a higher plan for that one feature we start with a base plan and let you add-on
+          only the features you need. </p>
+        <div class="mt-4 flex items-center gap-x-4">
+          <h4 class="flex-none text-md/6 font-semibold text-primary">What’s included</h4>
+          <div class="h-px flex-auto bg-surface-100" />
+        </div>
+        <ul class="mt-6 grid grid-cols-1 gap-4 text-sm/6 text-surface-600 sm:grid-cols-2" role="list">
+          <li v-for="feature in includedFeatures" :key="feature" class="flex gap-x-3">
+            <CheckIcon aria-hidden="true" class="h-6 w-5 flex-none text-secondary" />
+            {{ feature }}
+          </li>
+          <li class="flex gap-x-3 sm:col-span-2">
+            <CheckIcon aria-hidden="true" class="h-6 w-5 flex-none text-secondary" />
+            {{ bottomFeature }}
+          </li>
+        </ul>
       </div>
 
-      <!-- lg+ -->
-      <div class="isolate hidden lg:block">
-        <div class="relative -mx-8">
-          <div v-if="tiers.some((tier) => tier.mostPopular)" class="absolute inset-x-4 inset-y-0 -z-10 flex">
-            <div class="flex w-1/4 px-4" aria-hidden="true" :style="{ marginLeft: `${(tiers.findIndex((tier) => tier.mostPopular) + 1) * 25}%` }">
-              <div class="w-full rounded-t-xl border-x border-t border-gray-900/10 bg-gray-400/5" />
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:shrink-0">
+        <div
+          class="h-full rounded-2xl bg-surface-100 py-10 text-center ring-1 ring-inset ring-surface-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16"
+        >
+          <div class="mx-auto max-w-sm px-8">
+            <p class="flex items-baseline justify-center gap-x-2">
+              <span class="text-9xl font-semibold tracking-tight text-surface-900">${{ basePrice }}</span> <span
+              class="text-4xl/6 font-semibold tracking-wide text-surface-600"
+            >/mo</span>
+            </p>
+            <p class="my-3 text-xl text-surface-500">and</p>
+            <div class="text-surface-600 space-y-1">
+              <p class="text-4xl">{{ transactionPricingOnline }}</p>
+              <p class="text-xl">per successful charge for domestic cards</p>
             </div>
           </div>
-          <table class="w-full table-fixed border-separate border-spacing-x-8 text-left">
-            <caption class="sr-only">
-              Pricing plan comparison
-            </caption>
-            <colgroup>
-              <col class="w-1/4" />
-              <col class="w-1/4" />
-              <col class="w-1/4" />
-              <col class="w-1/4" />
-            </colgroup>
-            <thead>
-            <tr>
-              <td />
-              <th v-for="tier in tiers" :key="tier.id" scope="col" class="px-6 pt-6 xl:px-8 xl:pt-8">
-                <div class="text-sm/7 font-semibold text-gray-900">{{ tier.name }}</div>
-              </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row"><span class="sr-only">Price</span></th>
-              <td v-for="tier in tiers" :key="tier.id" class="px-6 pt-2 xl:px-8">
-                <div class="flex items-baseline gap-x-1 text-gray-900">
-                  <span class="text-4xl font-semibold">{{ tier.priceMonthly }}</span>
-                  <span class="text-sm/6 font-semibold">/month</span>
-                </div>
-                <a :href="tier.href" :class="[tier.mostPopular ? 'bg-primary text-white hover:bg-indigo-500' : 'text-primary ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300', 'mt-8 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary']">Buy plan</a>
-              </td>
-            </tr>
-            <template v-for="(section, sectionIdx) in sections" :key="section.name">
-              <tr>
-                <th scope="colgroup" colspan="4" :class="[sectionIdx === 0 ? 'pt-8' : 'pt-16', 'pb-4 text-sm/6 font-semibold text-gray-900']">
-                  {{ section.name }}
-                  <div class="absolute inset-x-8 mt-4 h-px bg-gray-900/10" />
-                </th>
-              </tr>
-              <tr v-for="feature in section.features" :key="feature.name">
-                <th scope="row" class="py-4 text-sm/6 font-normal text-gray-900">
-                  {{ feature.name }}
-                  <div class="absolute inset-x-8 mt-4 h-px bg-gray-900/5" />
-                </th>
-                <td v-for="tier in tiers" :key="tier.id" class="px-6 py-4 xl:px-8">
-                  <div v-if="typeof feature.tiers[tier.name] === 'string'" class="text-center text-sm/6 text-gray-500">{{ feature.tiers[tier.name] }}</div>
-                  <template v-else>
-                    <CheckIcon v-if="feature.tiers[tier.name] === true" class="mx-auto size-5 text-primary" aria-hidden="true" />
-                    <MinusIcon v-else class="mx-auto size-5 text-gray-400" aria-hidden="true" />
-                    <span class="sr-only">{{ feature.tiers[tier.name] === true ? 'Included' : 'Not included' }} in {{ tier.name }}</span>
-                  </template>
-                </td>
-              </tr>
-            </template>
-            </tbody>
-          </table>
         </div>
       </div>
-    </PageContainer>
+    </div>
+
+    <div class="isolate mx-auto mt-12 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div
+        v-for="(addOn, index) in addOns" :key="index"
+        class="p-2 flex flex-col justify-between rounded-2xl bg-white ring-1 ring-surface-200"
+      >
+        <div class="px-8 p-6">
+
+          <p class="text-lg/7 font-semibold text-secondary">Add-on</p>
+          <h3 class="text-surface-700 text-3xl/8 font-semibold">{{ addOn.name }}</h3>
+          <p class="mt-1 text-surface-600">{{ addOn.description }}</p>
+        </div>
+
+        <div class="mt-2 rounded-2xl bg-surface-100 py-4 ring-1 ring-inset ring-surface-900/5">
+          <p class="flex items-baseline justify-center gap-x-1">
+            <span class="text-5xl font-semibold tracking-tight text-surface-900">${{ addOn.price }}</span> <span
+            class="text-xl/6 font-semibold text-surface-600"
+          >/mo</span>
+          </p>
+          <p v-if="addOn.additionalPricing" class="mt-2 text-center font-semibold text-surface-600">
+            {{ addOn.additionalPricing }} </p>
+        </div>
+      </div>
+    </div>
+  </PageContainer>
 </template>

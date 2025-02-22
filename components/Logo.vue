@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = withDefaults(
   defineProps<{
     size?: "sm" | "md" | "lg";
   }>(),
   {
     size: "md",
-  }
+  },
 );
 
 const {businessName} = useCompanyInfo();
@@ -17,5 +17,5 @@ if (props.size === "lg") classes.value = "h-10";
 </script>
 
 <template>
-  <NuxtImg src="/tinyCommerce-logo.png" :alt="businessName" :class="classes" />
+  <NuxtImg :alt="businessName" :class="classes" src="/tinyCommerce-logo.png" />
 </template>

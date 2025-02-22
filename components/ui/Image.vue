@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Image from "primevue/image";
 
 withDefaults(
@@ -11,16 +11,12 @@ withDefaults(
   }>(),
   {
     preview: false,
-  }
+  },
 );
 </script>
 
 <template>
   <Image
-    :src="src"
-    :alt="alt"
-    :width="width"
-    :height="height"
-    :preview="preview"
+    :alt="alt" :height="height" :preview="preview" :src="src" :width="width"
   />
 </template>
