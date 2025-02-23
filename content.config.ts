@@ -3,16 +3,28 @@ import {defineCollection, defineContentConfig, z} from "@nuxt/content";
 export default defineContentConfig(
   {
     collections: {
+      benefits: defineCollection(
+        {
+          source: "benefits/*.yml",
+          type: "data",
+          schema: z.object(
+            {
+              icon: z.string(),
+              name: z.string(),
+              description: z.string(),
+            }),
+        },
+      ),
       cta: defineCollection(
         {
           source: "cta/*.md",
-          type:   "page",
+          type: "page",
         },
       ),
       faq: defineCollection(
         {
           source: "faq/*.yml",
-          type:   "data",
+          type: "data",
           schema: z.object(
             {
               question: z.string(),
@@ -23,25 +35,25 @@ export default defineContentConfig(
       features: defineCollection(
         {
           source: "features/*.yml",
-          type:   "data",
+          type: "data",
           schema: z.object(
             {
-              icon:        z.enum(["users", "chart-bar", "mobile", "desktop"]),
-              name:        z.string(),
+              icon: z.string(),
+              name: z.string(),
               description: z.string(),
             }),
         },
       ),
-      pages:     defineCollection(
+      pages: defineCollection(
         {
           source: "pages/*.md",
-          type:   "page",
+          type: "page",
         },
       ),
-      posts:     defineCollection(
+      posts: defineCollection(
         {
           source: "posts/*.md",
-          type:   "page",
+          type: "page",
         },
       ),
     },

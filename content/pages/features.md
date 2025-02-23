@@ -8,12 +8,19 @@ Meeting the needs of small business artisans.
 ::
 
 ::features-hero
+#heading
+A better commerce platform
+
+#default
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
+dolor cupiditate blanditiis ratione.
 ::
 
 ::features-list
-We believe in giving users exactly what they need and none of the fluff. These are the core features that every
-artisan needs.
-
 #heading
 Core Features
+
+#default
+We believe in giving users exactly what they need and none of the fluff. These are the core features that every
+artisan needs.
 ::
