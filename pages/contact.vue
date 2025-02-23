@@ -1,16 +1,10 @@
 <script lang="ts" setup>
-const {businessName} = useCompanyInfo();
+import usePageContent from "~/composables/usePageContent";
 
-useSeoMeta({
-             title:       `Contact | ${businessName}`,
-             description: "",
-           });
+const {page} = await usePageContent('contact');
+if(page.value) useSeoMeta(page.value.seo);
 </script>
 
 <template>
-  <PageHeader eyebrow="Contact Us" heading="Get In Touch">
-    We'd love to hear from you. Ask us questions. Give Feedback. Let us know what you need in a tiny commerce solution.
-  </PageHeader>
-
-  <FormContact />
+  <ContentRenderer v-if="page" :value="page"/>
 </template>

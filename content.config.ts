@@ -9,9 +9,9 @@ export default defineContentConfig(
           type:   "page",
         },
       ),
-      blog:     defineCollection(
+      posts:     defineCollection(
         {
-          source: "blog/*.md",
+          source: "posts/*.md",
           type:   "page",
         },
       ),

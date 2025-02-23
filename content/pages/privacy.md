@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy | TinyCommerce
+description:
 ---
 
 ::content-header

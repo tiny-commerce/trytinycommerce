@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-const {businessName} = useCompanyInfo();
+import usePageContent from "~/composables/usePageContent";
 
-useSeoMeta({
-  title: `Features | ${businessName}`,
-  description: "",
-});
+const {page} = await usePageContent('features');
+if(page.value) useSeoMeta(page.value.seo);
 </script>
 
 <template>
-  <PageHeader eyebrow="Features" heading="Meeting the needs of small business crafters."/>
-  <FeatureMain/>
-  <FeatureList/>
+  <ContentRenderer v-if="page" :value="page"/>
 </template>
