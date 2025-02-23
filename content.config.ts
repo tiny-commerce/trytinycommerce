@@ -9,6 +9,17 @@ export default defineContentConfig(
           type:   "page",
         },
       ),
+      faq: defineCollection(
+        {
+          source: "faq/*.yml",
+          type:   "data",
+          schema: z.object(
+            {
+              question: z.string(),
+              answer: z.string(),
+            }),
+        },
+      ),
       features: defineCollection(
         {
           source: "features/*.yml",

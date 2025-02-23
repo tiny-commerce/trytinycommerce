@@ -1,13 +1,7 @@
 <script setup>
-import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/vue";
-import {MinusSmallIcon, PlusSmallIcon} from "@heroicons/vue/24/outline";
-
 const {data: questions} = await useAsyncData('faq', () => {
   return queryCollection("faq").all();
 });
-
-console.log('questions', questions.value);
-console.log('first question', questions.value[0].meta.body.value);
 
 const faqs = [
   {
@@ -77,25 +71,13 @@ const faqs = [
   <LayoutContainer>
     <div class="mx-auto max-w-4xl">
       <dl class="mt-16 divide-y divide-gray-900/10">
-        <template v-if="questions">
-
-<!--        <ContentRenderer v-for="(question, index) in questions" :key="index" :value="question" />-->
-        </template>
-<!--        <Disclosure-->
-<!--          v-for="faq in faqs" :key="faq.question" v-slot="{ open }" as="div" class="py-6 first:pt-0 last:pb-0"-->
-<!--        >-->
-<!--          <dt>-->
-<!--            <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">-->
-<!--              <span class="text-xl/7 font-semibold">{{ faq.question }}</span> <span class="ml-6 flex h-7 items-center">-->
-<!--                <PlusSmallIcon v-if="!open" aria-hidden="true" class="size-6" />-->
-<!--                <MinusSmallIcon v-else aria-hidden="true" class="size-6" />-->
-<!--              </span>-->
-<!--            </DisclosureButton>-->
-<!--          </dt>-->
-<!--          <DisclosurePanel as="dd" class="mt-2 pr-12">-->
-<!--            <p class="text-base/7 text-gray-600">{{ faq.answer }}</p>-->
-<!--          </DisclosurePanel>-->
-<!--        </Disclosure>-->
+        <ClientOnly>
+          <template v-if="questions">
+            <FaqItem v-for="question in questions" :key="question.id" :answer="question.answer">
+              {{ question.question }}
+            </FaqItem>
+          </template>
+        </ClientOnly>
       </dl>
     </div>
   </LayoutContainer>

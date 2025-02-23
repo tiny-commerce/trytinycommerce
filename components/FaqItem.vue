@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import {MinusSmallIcon, PlusSmallIcon} from "@heroicons/vue/24/outline";
 import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/vue";
+
+defineProps<{
+  answer: string;
+}>()
 </script>
 
 <template>
-  <div class="mx-auto max-w-2xl">
   <Disclosure v-slot="{ open }" as="div" class="py-6 first:pt-0 last:pb-0">
     <dt>
       <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">
@@ -17,11 +20,9 @@ import {Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/vue";
         </span>
       </DisclosureButton>
     </dt>
+
     <DisclosurePanel as="dd" class="mt-2 pr-12">
-      <p class="text-base/7 text-gray-600">
-        <slot name="answer"/>
-      </p>
+      <div class="text-base/7 text-gray-600" v-html="answer" />
     </DisclosurePanel>
   </Disclosure>
-  </div>
 </template>
