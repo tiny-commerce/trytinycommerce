@@ -1,6 +1,6 @@
 ---
 title: Features | TinyCommerce
-description:
+description: null
 ---
 
 ::content-header

@@ -1,6 +1,6 @@
 ---
 title: Contact | TinyCommerce
-description:
+description: null
 ---
 
 ::content-header

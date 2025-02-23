@@ -1,6 +1,6 @@
 ---
 title: Blog | TinyCommerce
-description:
+description: null
 ---
 
 ::content-header

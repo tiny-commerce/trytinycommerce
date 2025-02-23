@@ -1,6 +1,6 @@
 ---
 title: TinyCommerce
-description:
+description: null
 ---
 
 ::home-hero
