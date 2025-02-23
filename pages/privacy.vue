@@ -1,23 +1,10 @@
 <script lang="ts" setup>
-const {businessName} = useCompanyInfo();
+import usePageContent from "~/composables/usePageContent";
 
-useSeoMeta({
-             title:       `Privacy Policy | ${businessName}`,
-             description: "",
-           });
-
-const {data: page} = await useAsyncData(
-  "privacy",
-  queryContent("/privacy").findOne,
-);
-
-const heading = page.value?.title ? page.value.title : "Privacy";
-const lastUpdated = page.value?.lastUpdated ? page.value.lastUpdated : "Jan 1st, 2025";
+const {page} = await usePageContent('privacy');
+if(page.value) useSeoMeta(page.value.seo);
 </script>
 
 <template>
-  <PageHeader :heading="heading" :subheading="`Last updated on ${lastUpdated}`" />
-  <div class="prose prose-slate max-w-3xl mx-auto">
-    <ContentDoc />
-  </div>
+    <ContentRenderer v-if="page" :value="page" />
 </template>

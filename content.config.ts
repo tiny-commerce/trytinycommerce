@@ -3,17 +3,16 @@ import {defineCollection, defineContentConfig, z} from "@nuxt/content";
 export default defineContentConfig(
   {
     collections: {
+      pages:     defineCollection(
+        {
+          source: "pages/*.md",
+          type:   "page",
+        },
+      ),
       blog:     defineCollection(
         {
           source: "blog/*.md",
           type:   "page",
-          schema: z.object(
-            {
-              isPublished: z.boolean(),
-              title:       z.string(),
-              description: z.string(),
-              writtenOn:   z.date(),
-            }),
         },
       ),
       features: defineCollection(

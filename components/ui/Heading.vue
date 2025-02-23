@@ -2,7 +2,7 @@
 const props = withDefaults(
   defineProps<{
     level?: "h1" | "h2" | "h3" | "h4" | "p";
-    size?: "xl" | "lg" | "md" | "sm";
+    size?: "xl" | "lg" | "md" | "sm" | "xs";
     color?: "dark" | "default" | "light" | "white" | "primary";
   }>(),
   {
@@ -22,6 +22,8 @@ if (props.size === "md")
   headingClasses.value += " text-3xl md:text-4xl lg:text-5xl";
 if (props.size === "sm")
   headingClasses.value += " text-xl md:text-2xl lg:text-3xl";
+if (props.size === "xs")
+  headingClasses.value += " text-lg md:text-xl lg:text-2xl";
 
 if (props.color === "dark") headingClasses.value += " text-surface-800";
 if (props.color === "default") headingClasses.value += " text-surface-700";

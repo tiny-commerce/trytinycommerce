@@ -1,16 +1,19 @@
 ---
-title: Privacy Policy
-companyName: TinyCommerce, LLC
-website: TryTinyCommerce.com
-email: privacy@TryTinyCommerce.com
-lastUpdated: Feb 1st, 2025
+title: Privacy Policy | TinyCommerce
 ---
+::ContentHeader
+Privacy Policy
 
-This Privacy Policy describes
-how {{ $doc.companyName }} (the "**Site**", "**we**", "**us**", or "**our**") collects, uses, and discloses your personal information when you visit {{ $
-doc.website }} (the "**Site**") or otherwise communicate with us (collectively, the "**Services**"). For purposes of
-this Privacy Policy, "**you**" and "**your**" means you as the user of the Services, whether you are a customer, website
-visitor, or another individual whose information we have collected pursuant to this Privacy Policy.
+#subheading
+Last updated on Feb 1st, 2025
+::
+
+::Prose
+This Privacy Policy describes how TinyCommerce (the "**Site**", "**we**", "**us**", or "**our**") collects, uses, and
+discloses your personal information when you visit trytinycommerce.com (the "**Site**") or otherwise communicate with
+us (collectively, the "**Services**"). For purposes of this Privacy Policy, "**you**" and "**your**" means you as the 
+user of the Services, whether you are a customer, website visitor, or another individual whose information we have 
+collected pursuant to this Privacy Policy.
 
 Please read this Privacy Policy carefully. By using and accessing any of the Services, you agree to the collection, use,
 and disclosure of your information as described in this Privacy Policy. If you do not agree to this Privacy Policy,
@@ -213,4 +216,5 @@ in these countries.
 ## Contact
 
 Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any
-of the rights available to you, please email us at {{ $doc.email }}
+of the rights available to you, please email us at hello@trytinycommerce.com
+::

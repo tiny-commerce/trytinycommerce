@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-const {businessName} = useCompanyInfo();
+defineProps<{
+  imgSrc: string;
+  imgAlt: string;
+}>()
 </script>
 
 <template>
@@ -25,15 +28,16 @@ const {businessName} = useCompanyInfo();
           <a
             class="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-primary ring-1 ring-inset ring-primary/10"
             href="#cta"
-          > {{ businessName }} is coming soon | Get notified </a>
+          >
+            <slot name="tag" mdc-unwrap="p"/>
+          </a>
         </div>
         <UiHeading color="primary" level="h1" size="lg">
-          The <span class="text-tiny pr-4">tiny</span> commerce platform built for <span class="text-tiny -ml-1">artisans</span>
+          <slot name="heading" mdc-unwrap="p"/>
         </UiHeading>
 
         <p class="mt-8 text-pretty text-lg text-gray-500 sm:text-xl/8">
-          There are plenty of commerce solutions out there. Most try to be for "everyone", but TinyCommerce isn't for
-          everyone. It's for those that sell what they create. <strong>TinyCommerce is built for the makers!</strong>
+          <slot name="description" mdc-unwrap="p"/>
         </p>
 
         <!--        <div class="mt-10 flex items-center gap-x-6">-->
@@ -47,9 +51,10 @@ const {businessName} = useCompanyInfo();
           <div
             class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4"
           >
-            <img
-              alt="App screenshot" class="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10" height="1442"
-              src="https://tailwindui.com/plus-assets/img/component-images/project-app-screenshot.png" width="2432"
+            <NuxtImg
+              :src="imgSrc"
+              :alt="imgAlt"
+              class="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
             />
           </div>
         </div>
