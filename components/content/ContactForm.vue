@@ -8,7 +8,8 @@ const fields = {
 </script>
 
 <template>
-  <UiForm :fields="fields" class="mx-auto my-8 max-w-2xl sm:my-12">
+  <LayoutContainer skinny>
+  <UiForm :fields="fields" class="my-8 sm:my-12">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <UiField label="First Name">
         <UiInput />
@@ -36,4 +37,5 @@ const fields = {
       <UiButton fullWidth label="Send Message" type="submit" />
     </div>
   </UiForm>
+  </LayoutContainer>
 </template>
