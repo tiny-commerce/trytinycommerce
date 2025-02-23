@@ -1,17 +1,15 @@
 <template>
-  <div class="bg-surface-100 py-24 sm:py-32">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-base/7 font-semibold text-secondary">Deploy faster</h2>
-      <p class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Everything
-        you need to deploy your app</p>
-      <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+  <div class="bg-surface-100 py-16 sm:py-24">
+    <LayoutContainer>
+      <div class="grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]" />
           <div
             class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]"
           >
             <img
-              alt="" class="h-80 object-cover object-left"
+              alt=""
+              class="h-80 object-cover object-left"
               src="https://tailwindui.com/plus-assets/img/component-images/bento-01-performance.png"
             />
             <div class="p-10 pt-4">
@@ -25,6 +23,7 @@
             class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
           />
         </div>
+
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]" />
           <div
@@ -45,6 +44,7 @@
             class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"
           />
         </div>
+
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-bl-[2rem]" />
           <div
@@ -65,6 +65,7 @@
             class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]"
           />
         </div>
+
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white" />
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
@@ -81,6 +82,7 @@
           </div>
           <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
         </div>
+
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]" />
           <div
@@ -102,6 +104,6 @@
           />
         </div>
       </div>
-    </div>
+    </LayoutContainer>
   </div>
 </template>

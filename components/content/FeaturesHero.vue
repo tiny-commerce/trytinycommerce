@@ -1,4 +1,8 @@
-<script setup>
+<script lang="ts" setup>
+defineProps<{
+  imageUrl: string
+}>()
+
 const {data:benefits} = await useAsyncData('benefits', () => $fetch('/api/list/benefits'));
 </script>
 
@@ -38,7 +42,7 @@ const {data:benefits} = await useAsyncData('benefits', () => $fetch('/api/list/b
           <NuxtImg
             alt="Product screenshot"
             class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-surface-400/10"
-            src="/screenshot-features.png"
+            :src="imageUrl"
             :width="2432"
           />
           </div>

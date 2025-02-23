@@ -1,0 +1,4 @@
+name:              POS System
+description:       Sell in person with POS hardware. Accept credit cards at a discounted rate of 2.7% + 5¢.
+price:             40
+additionalPricing: Requires hardware purchase

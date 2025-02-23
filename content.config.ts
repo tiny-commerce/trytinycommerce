@@ -3,6 +3,19 @@ import {defineCollection, defineContentConfig, z} from "@nuxt/content";
 export default defineContentConfig(
   {
     collections: {
+      addOns: defineCollection(
+        {
+          source: "add-ons/*.yml",
+          type: "data",
+          schema: z.object(
+            {
+              name: z.string(),
+              description: z.string(),
+              price: z.string(),
+              additionalPricing: z.string().optional(),
+            }),
+        },
+      ),
       benefits: defineCollection(
         {
           source: "benefits/*.yml",
@@ -54,6 +67,11 @@ export default defineContentConfig(
         {
           source: "posts/*.md",
           type: "page",
+          schema: z.object(
+            {
+              isPublished: z.boolean(),
+              date: z.date(),
+            }),
         },
       ),
     },
