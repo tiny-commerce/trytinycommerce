@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-const {data: page} = await useAsyncData('blog', () => {
-  return queryCollection("pages").path('/pages/blog').first();
+const {path} = useRoute();
+const {data: page} = await useAsyncData(path, () => {
+  return queryCollection("pages").path('/pages' + path).first();
 });
 if(page.value) useSeoMeta(page.value.seo);
 </script>

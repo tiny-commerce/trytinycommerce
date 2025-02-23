@@ -6,7 +6,7 @@ export default function useMenu() {
       {label: "Features", to: "/features"},
       {label: "Pricing", to: "/pricing"},
       {label: "FAQ", to: "/faq"},
-      // { label: "Blog", to: "/blog" },
+      { label: "Blog", to: "/blog" },
     ],
     mobileNavigation: [
       {label: "Home", to: "/"},

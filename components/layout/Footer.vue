@@ -1,20 +1,24 @@
 <script lang="ts" setup>
-const {startYear, businessName} = useCompanyInfo();
 const {footerNavigation} = useMenu();
 
+const startYear = 2025;
 const currentYear = new Date().getFullYear();
-let copyrightYear = currentYear;
+let copyrightYear = Number(currentYear);
 
 if (currentYear > startYear) {
-  copyrightYear = `${startYear}-${currentYear}`;
+  copyrightYear = startYear-currentYear;
 }
+
+const {data: cta} = await useAsyncData('footer-cta', () => {
+  return queryCollection("cta").path('/cta/coming-soon').first();
+});
 </script>
 
 <template>
-  <SectionCTA />
+  <ContentRenderer v-if="cta" :value="cta"/>
 
   <footer class="pt-4 pb-8">
-    <PageContainer>
+    <LayoutContainer>
       <NuxtLink class="flex justify-center" to="/">
         <Logo />
       </NuxtLink>
@@ -24,9 +28,9 @@ if (currentYear > startYear) {
       </nav>
 
       <p class="text-center text-sm/6 text-surface-500">
-        &copy; {{ copyrightYear }} {{ businessName }}, LLC. All rights reserved. |
+        &copy; {{ copyrightYear }} TinyCommerce, LLC. All rights reserved. |
         <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
       </p>
-    </PageContainer>
+    </LayoutContainer>
   </footer>
 </template>

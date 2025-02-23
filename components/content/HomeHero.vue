@@ -22,7 +22,7 @@ defineProps<{
       <rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" height="100%" stroke-width="0" width="100%" />
     </svg>
 
-    <PageContainer class="pb-16 pt-10 sm:pb-32 lg:flex lg:pt-40 lg:pb-24">
+    <LayoutContainer class="pb-16 pt-10 sm:pb-32 lg:flex lg:pt-40 lg:pb-24">
       <div class="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
         <div class="mt-24 sm:mt-32 lg:mt-16 mb-6">
           <a
@@ -59,6 +59,6 @@ defineProps<{
           </div>
         </div>
       </div>
-    </PageContainer>
+    </LayoutContainer>
   </div>
 </template>

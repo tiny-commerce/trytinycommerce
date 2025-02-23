@@ -3,15 +3,9 @@ import {defineCollection, defineContentConfig, z} from "@nuxt/content";
 export default defineContentConfig(
   {
     collections: {
-      pages:     defineCollection(
+      cta: defineCollection(
         {
-          source: "pages/*.md",
-          type:   "page",
-        },
-      ),
-      posts:     defineCollection(
-        {
-          source: "posts/*.md",
+          source: "cta/*.md",
           type:   "page",
         },
       ),
@@ -25,6 +19,18 @@ export default defineContentConfig(
               name:        z.string(),
               description: z.string(),
             }),
+        },
+      ),
+      pages:     defineCollection(
+        {
+          source: "pages/*.md",
+          type:   "page",
+        },
+      ),
+      posts:     defineCollection(
+        {
+          source: "posts/*.md",
+          type:   "page",
         },
       ),
     },

@@ -57,7 +57,7 @@ const addOns = [
 </script>
 
 <template>
-  <PageContainer>
+  <LayoutContainer>
     <div class="mx-auto max-w-2xl rounded-3xl ring-1 ring-surface-200 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
         <h3 class="text-3xl font-semibold tracking-tight text-surface-700">One Base Price</h3>
@@ -123,5 +123,5 @@ const addOns = [
         </div>
       </div>
     </div>
-  </PageContainer>
+  </LayoutContainer>
 </template>

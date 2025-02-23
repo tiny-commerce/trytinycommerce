@@ -60,7 +60,7 @@ const coreFeatures = [
 </script>
 
 <template>
-  <PageContainer>
+  <LayoutContainer>
     <div class="mx-auto max-w-2xl lg:text-center">
       <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
         Core Features </p>
@@ -82,5 +82,5 @@ const coreFeatures = [
         </div>
       </dl>
     </div>
-  </PageContainer>
+  </LayoutContainer>
 </template>

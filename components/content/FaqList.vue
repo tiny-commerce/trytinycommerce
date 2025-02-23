@@ -67,7 +67,7 @@ const faqs = [
 </script>
 
 <template>
-  <PageContainer>
+  <LayoutContainer>
     <div class="mx-auto max-w-4xl">
       <dl class="mt-16 divide-y divide-gray-900/10">
         <Disclosure
@@ -87,5 +87,5 @@ const faqs = [
         </Disclosure>
       </dl>
     </div>
-  </PageContainer>
+  </LayoutContainer>
 </template>

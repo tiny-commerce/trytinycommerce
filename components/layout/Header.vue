@@ -9,7 +9,7 @@ const mobileMenuOpen = ref(false);
 
 <template>
   <header class="relative z-30">
-    <PageContainer class="h-16 flex items-center justify-between gap-x-6 bg-white/50">
+    <LayoutContainer class="h-16 flex items-center justify-between gap-x-6 bg-white/50">
       <div class="md:flex-1">
         <NuxtLink href="/">
           <Logo size="sm" />
@@ -30,7 +30,7 @@ const mobileMenuOpen = ref(false);
       <div class="flex md:hidden">
         <UiButton :icon="IconList.Menu" variant="text" @click="mobileMenuOpen = true" />
       </div>
-    </PageContainer>
+    </LayoutContainer>
 
     <Dialog :open="mobileMenuOpen" class="md:hidden" @close="mobileMenuOpen = false">
       <DialogPanel
