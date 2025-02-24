@@ -9,7 +9,7 @@ export default defineNuxtConfig(
     },
     content:           {
       preview: {
-        api: "https://trytinycommerce.com/",
+        api: "https://trytinycommerce.pages.dev/",
       },
     },
     modules:           [
