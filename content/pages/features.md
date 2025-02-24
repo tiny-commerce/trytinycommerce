@@ -9,7 +9,7 @@ Meeting the needs of small business artisans.
 
 ::features-hero
 ---
-imageUrl: /screenshot-features.png
+imageSrc: /screenshot-features.png
 ---
 #heading
 A better commerce platform

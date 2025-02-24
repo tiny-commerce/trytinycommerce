@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  imageUrl: string
+  imageSrc: string
 }>()
 
 const {data:benefits} = await useAsyncData('benefits', () => $fetch('/api/list/benefits'));
@@ -42,7 +42,7 @@ const {data:benefits} = await useAsyncData('benefits', () => $fetch('/api/list/b
           <NuxtImg
             alt="Product screenshot"
             class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-surface-400/10"
-            :src="imageUrl"
+            :src="imageSrc"
             :width="2432"
           />
           </div>

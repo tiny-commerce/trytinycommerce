@@ -57,6 +57,19 @@ export default defineContentConfig(
             }),
         },
       ),
+      highlights: defineCollection(
+        {
+          source: "highlights/*.yml",
+          type: "data",
+          schema: z.object(
+            {
+              eyebrow: z.string(),
+              heading: z.string(),
+              description: z.string(),
+              image: z.string(),
+            }),
+        },
+      ),
       pages: defineCollection(
         {
           source: "pages/*.md",
