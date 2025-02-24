@@ -83,7 +83,7 @@ export default defineContentConfig(
           schema: z.object(
             {
               isPublished: z.boolean(),
-              date: z.date(),
+              date: z.string(),
             }),
         },
       ),
